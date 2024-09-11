@@ -9,6 +9,7 @@ To reproduce
 1. curl
    ```
    curl --location --request PATCH 'http://localhost:3000/invalid' \
+   -H 'Content-Type: application/json' \
    --data '{
        "status": "bar",
        "statusReason": "baz"
@@ -33,4 +34,3 @@ Actual:
     "message": "body/status must be equal to one of the allowed values, body must have required property 'statusReason', body must match exactly one schema in oneOf"
 }
 ```
-
